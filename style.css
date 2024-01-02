@@ -51,22 +51,22 @@ nav ul li:hover {
   display: flex;
   flex-direction: column;
   margin: auto;
-  /* justify-content: space-between; */
-  gap: 10px;
+  justify-content: center;
+  gap: 150px;
   /* line-height: 5; */
-  align-items: center;
-  padding-left: 100px;
-  /* background: url(/img/bg.jpeg); */
+  background-blend-mode:screen;
+  background: url(/img/ce2.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-
+  background-position:center;
   /* line-height: 1.5em; */
   font-size: 0.9em;
   /* padding: 40px; */
   width: 100%;
   height: 78vh;
-  background-color: red;
+  background-color: rgb(0, 0, 0);
   margin: 0 auto;
+  
 }
 
 .handle {
@@ -101,6 +101,9 @@ nav ul li:hover {
   }
 }
 
+
+
+
 /* 11 */
 
 p {
@@ -111,14 +114,17 @@ p {
   color: #676767;
 }
 .frame {
-  width: 90%;
+  width: 100%;
   /* margin: 40px auto; */
   text-align: center;
 }
 button {
+  padding:auto;
   /* margin: 20px; */
 }
 .custom-btn {
+  /* margin: auto; */
+
   width: 130px;
   height: 40px;
   color: #fff;
@@ -187,3 +193,403 @@ button {
   }
 }
 /* 11end */
+
+
+
+
+
+
+
+/* 2nd */
+
+.des, p {
+  font-size:90px;
+}
+
+
+
+.clear {
+  clear: both;
+}
+img {
+  max-width: 100%;
+  border: 0px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+a:focus,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #e73700;
+}
+h2 {
+  margin-bottom: 48px;
+  /* padding-bottom: 16px; */
+  font-size: 20px;
+  padding-top:100px;  
+  /* line-height: 28px; */
+  font-weight: 700;
+  position: relative;
+  text-transform: capitalize;
+}
+/* h3 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  line-height: 10px;
+} */
+button {
+  outline: none !important;
+}
+/******* Common Element CSS End *********/
+
+/* -------- title style ------- */
+.line-title {
+  position: relative;
+  width: 400px;
+}
+.line-title::before,
+.line-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+}
+.line-title::before {
+  width: 100%;
+  background: #f2f2f2;
+}
+.line-title::after {
+  width: 32px;
+  background: #e73700;
+}
+
+/******* Middle section CSS Start ******/
+/* -------- Landing page ------- */
+.game-section {
+  
+  padding: 60px 50px;
+}
+.game-section .owl-stage {
+  margin: 15px 0;
+  display: flex;
+  display: -webkit-flex;
+}
+.game-section .item {
+  margin: 0 15px 60px;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  background: #343434 no-repeat center center / cover;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.game-section .item.active {
+  width: 500px;
+  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+}
+.game-section .item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+.game-section .item-desc {
+  padding: 0 24px 12px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transform: translateY(calc(100% - 54px));
+  -webkit-transform: translateY(calc(100% - 54px));
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+.game-section .item.active .item-desc {
+  transform: none;
+  -webkit-transform: none;
+}
+.game-section .item-desc p {
+  opacity: 0;
+  -webkit-transform: translateY(32px);
+  transform: translateY(32px);
+  transition: all 0.4s ease-in-out 0.2s;
+  -webkit-transition: all 0.4s ease-in-out 0.2s;
+}
+.game-section .item.active .item-desc p {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.game-section .owl-theme.custom-carousel .owl-dots {
+  margin-top: -20px;
+  position: relative;
+  z-index: 5;
+}
+/******** Middle section CSS End *******/
+
+/***** responsive css Start ******/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  h2 {
+    margin-bottom: 32px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    /* line-height: 32px; */
+  }
+
+  /* -------- Landing page ------- */
+  .game-section {
+    padding: 50px 30px;
+  }
+  .game-section .item {
+    margin: 0 12px 60px;
+    width: 260px;
+    height: 360px;
+  }
+  .game-section .item.active {
+    width: 400px;
+  }
+  .game-section .item-desc {
+    transform: translateY(calc(100% - 46px));
+    -webkit-transform: translateY(calc(100% - 46px));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  h2 {
+    margin-bottom: 32px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .line-title {
+    width: 330px;
+  }
+
+  /* -------- Landing page ------- */
+  .game-section {
+    padding: 50px 30px 40px;
+  }
+  .game-section .item {
+    margin: 0 12px 60px;
+    width: 240px;
+    height: 330px;
+  }
+  .game-section .item.active {
+    width: 360px;
+  }
+  .game-section .item-desc {
+    transform: translateY(calc(100% - 42px));
+    -webkit-transform: translateY(calc(100% - 42px));
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    line-height: 24px;
+  }
+  .line-title {
+    width: 250px;
+  }
+
+  /* -------- Landing page ------- */
+  .game-section {
+    padding: 30px 15px 20px;
+  }
+  .game-section .item {
+    margin: 0 10px 40px;
+    width: 200px;
+    height: 280px;
+  }
+  .game-section .item.active {
+    width: 270px;
+    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+  }
+  .game-section .item-desc {
+    padding: 0 14px 5px;
+    transform: translateY(calc(100% - 42px));
+    -webkit-transform: translateY(calc(100% - 42px));
+  }
+}
+
+
+
+
+/* 2nd */
+.title{
+  font-size:60px;
+  padding:20px 0px;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  /* background-color:#eaeaea; */
+}
+.container{
+  width:900px;
+  margin:0px auto;
+}
+/* Float three columns side by side */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 700px) {
+  
+ .container{
+  width: 100%;
+}
+  
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  text-align: center;
+  background-color: #fff;
+  border-radius:10px;
+  cursor:pointer;
+}
+.card .profile{
+   border-radius:10px;
+   transition: 0.2s;
+}
+.card:hover .profile{
+  transform:scale(1.4);
+  border-top-right-radius:50px;
+  border-top-left-radius:50px;
+}
+
+.card .content{
+  width:100%;
+  height:100%;
+  position:relative;
+  overflow:hidden;
+}
+.card .content .back{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color: #f1f1f1e6;
+  transition:1s;
+  
+  z-index:1;
+  padding:10px;
+}
+
+.from-left{
+  top:0;
+  left:-100%;
+}
+.card:hover .content .from-left {
+   left:0%;
+}
+
+.from-bottom{
+  top:100%;
+  left:0;
+}
+.card:hover .content .from-bottom {
+   top:0%;
+}
+
+.from-right{
+  top:0%;
+  right:-100%;
+}
+.card:hover .content .from-right {
+   right:0;
+}
+
+.card .content .back h3{
+  font-size:15px;
+  letter-spacing:2px;
+}
+.card .content .back .tem-img{
+  border-radius:100%;
+}
+
+.card .content .back .des{
+  font-size:13px;
+  padding:20px 0px;
+}
+.card .content .back .social-icon{
+  list-style:none;
+  margin:0px;
+  padding:0px;
+}
+.card .content .back .social-icon li{
+  display:inline-block;
+}
+
+.card .content .back .social-icon li a{
+  display:block;
+  background:#333;
+  color:#fff;
+  width:40px;
+  height:40px;
+  text-align:center;
+  line-height:40px;
+  border-radius:100%;
+}
+
+/* 2nd */

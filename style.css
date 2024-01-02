@@ -47,13 +47,15 @@ nav ul li:hover {
 }
 
 #firsts {
+  /* padding-top:200px; */
   display: flex;
   flex-direction: column;
   margin: auto;
   /* justify-content: space-between; */
   gap: 10px;
+  /* line-height: 5; */
   align-items: center;
-  padding-left: 125px;
+  padding-left: 100px;
   /* background: url(/img/bg.jpeg); */
   background-repeat: no-repeat;
   background-size: cover;
